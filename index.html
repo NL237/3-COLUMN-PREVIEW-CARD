@@ -29,8 +29,8 @@
     }
     #grid{
       margin: auto;
-      width: 50%;
-      border-radius: 7px;
+      width: 60%;
+      border-radius: 5px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       overflow: hidden;
@@ -52,8 +52,9 @@
     .tab p{
       color: var(--Transparent--white);
       font-size: 12px;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
       line-height: 19px;
+      height: 100px;
     }
     .tab1 button{color: var(--Bright--orange);}
     .tab2 button{color: var(--Dark--cyan);}
@@ -65,6 +66,7 @@
       border-radius: 35px;
       font-size: 11px;
     }
+    /*ACTIVE STATE*/
     .tab button:hover{
       border: 1px solid var(--Very--light--gray);
       cursor: pointer;
@@ -73,6 +75,32 @@
     .tab1 button:hover{background-color: var(--Bright--orange);}
     .tab2 button:hover{background-color: var(--Dark--cyan);}
     .tab3 button:hover{background-color: var(--Very--dark--cyan);}
+    
+    /*MEDIA QUERIES*/
+    @media screen and (max-width: 1050px) {
+      #grid{
+        width: 80%;
+      }
+      .tab{padding: 20px;}
+    }
+    @media screen and (max-width: 650px) {
+      #grid{
+        width: 95%;
+      }
+      .tab p{
+        font-size: 10px;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      #grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+      }
+      .tab p{
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+    }
 
   </style>
 </head>
